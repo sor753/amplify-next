@@ -4,6 +4,7 @@ import { generateClient } from 'aws-amplify/api';
 import { Schema } from '../amplify/data/resource';
 import SayHelloBtn from './components/SayHelloBtn';
 import Hello from './components/Hello';
+import Auth from './components/auth/Auth2';
 
 const client = generateClient<Schema>();
 
@@ -28,6 +29,7 @@ export default async function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image className="dark:invert" src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
         <Hello sayHello={sayHelloServer} />
+        <Auth />
       </main>
     </div>
   );
